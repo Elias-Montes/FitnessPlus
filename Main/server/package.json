@@ -1,11 +1,14 @@
 {
-  "name": "server",
-  "version": "1.0.0",
-  "description": "",
+  "name": "FitnessPlus",
+  "version": "1.0.1",
+  "description": "MERN Application",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon index",
+    "seed": "node seeds/seed",
+    "heroku-postbuild": "node seeds/seed.js"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +17,18 @@
     "express": "^4.18.2",
     "graphql": "^16.8.1",
     "mongoose": "^7.5.2"
-  }
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elias-Montes/FitnessPlus.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/Elias-Montes/FitnessPlus/issues"
+  },
+  "homepage": "https://github.com/Elias-Montes/FitnessPlus#readme"
+
 }
