@@ -9,7 +9,7 @@ require("dotenv/config");
 const db = require('./config/connection');
 
 // Comment out this code once you have built out queries and mutations in the client folder
-const routes = require('./routes/index.js');
+const routes = require('./routes');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -51,11 +51,11 @@ app.get("/", (req, res) => {
 //   });
 // };
 
-const exercisesRouter = require("./routes/api/exercises");
-const usersRouter = require("./routes/api/users");
+const exercisesRouter = require("./routes/api/exercise-routes");
+const usersRouter = require("./routes/api/user-routes");
 
-app.use("/exercises", exercisesRouter);
-app.use("/users", usersRouter);
+app.use("/exercise-routes", exercisesRouter);
+app.use("/user-routes", usersRouter);
 // Comment out this code once you have built out queries and mutations in the client folder
 db.once('open', () => {
   app.listen(PORT, () => console.log(`Now listening on localhost: ${PORT}`));
