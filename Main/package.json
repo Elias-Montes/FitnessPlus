@@ -12,5 +12,17 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elias-Montes/FitnessPlus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Elias-Montes/FitnessPlus/issues"
+  },
+  "homepage": "https://github.com/Elias-Montes/FitnessPlus#readme",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+
 }
