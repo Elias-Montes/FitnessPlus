@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {ApolloClient, ApolloProvider, createHttpLink, InMemoryCache} from '@apollo/client'
 import { setContext } from '@apollo/client/link/context';
-import Login from "./pages/login"
+import Login from "./pages/LoginSignup/login"
 import MainPage from "./pages/mainPage";
 import SearchPage from './pages/searchPage'
 import NavBar from "./component/navBar/navBar";
@@ -38,7 +38,13 @@ const httpLink = createHttpLink({
                 <NavBar/>
                 <Routes>
                     <Route path="/login" element={<Login/>}/>
-                    <Route path="/" element={<MainPage/>}/>
+                    {/* how to get token, when your token get signed update state of loggedin key & app.js takes advantage of that*/}
+                    {/* {
+                      this.state.loggedIn ? 
+                      <Route path="/" element={<MainPage/>}/>:
+                      <Route path="/" element={<Login/>}/>
+                    } */}
+                    
                     <Route path="/searchPage" element={<SearchPage/>}/>
                 </Routes>
                 </>
