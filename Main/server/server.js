@@ -2,8 +2,8 @@ const express = require('express');
 // Uncomment the following code once you have built the queries and mutations in the client folder
 // const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
-const cors = require("cors");
-require("dotenv/config");
+// const cors = require("cors");
+// require("dotenv/config");
 // Uncomment the following code once you have built the queries and mutations in the client folder
 // const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
@@ -23,9 +23,9 @@ const server = new ApolloServer({
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(cors());
+// app.use(cors());
 
-// if we're in production, serve client/build as static assets
+// // if we're in production, serve client/build as static assets
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
