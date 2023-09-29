@@ -1,0 +1,11 @@
+[
+    {
+        "type": "",
+        "name": "Run",
+        "distance": 0.5,
+        "duration": 5,
+        "date": {"$date"},
+        ""
+
+    }
+]
