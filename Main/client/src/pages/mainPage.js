@@ -10,7 +10,7 @@ function MainPage() {
 
     return (
         <div>
-            <nav class="navbar background">
+            {/* <nav class="navbar background">
                 <ul class="nav-list">
                     <div class="logo">
                         <img alt='LOGO' src='./Fitness-Gym-Barbell-Dumbbell-logo-design-EDITED.jpg'></img>
@@ -27,7 +27,7 @@ function MainPage() {
                     <input placeholder='Search for your food' type="text" name="search" id="search" />
                     <button class="btn btn-sm">Search</button>
                 </div>
-            </nav>
+            </nav> */}
             <section class="section" id='Calendar'>
                 <div class="box-main">
                     <div class="userInput">
