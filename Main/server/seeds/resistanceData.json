@@ -1,0 +1,40 @@
+
+[
+        {
+            "type": "strength",
+            "name": "Bench Press",
+            "weight": 135,
+            "sets": 3,
+            "reps": 10,
+            "date": "2023-10-02T14:00:00Z",
+            "userId": "user1"
+        },
+        {
+            "type": "strength",
+            "name": "Squat",
+            "weight": 185,
+            "sets": 4,
+            "reps": 8,
+            "date": "2023-10-02T15:30:00Z",
+            "userId": "user2"
+        },
+        {
+            "type": "strength",
+            "name": "Deadlift",
+            "weight": 225,
+            "sets": 3,
+            "reps": 5,
+            "date": "2023-10-03T12:15:00Z",
+            "userId": "user3"
+        },
+        {
+            "type": "strength",
+            "name": "Dumbell Curl",
+            "weight": 30,
+            "sets": 3,
+            "reps": 6,
+            "date": "2023-10-03T17:45:00Z",
+            "userId": "user4"
+        }
+ ]
+    
