@@ -12,6 +12,7 @@ const db = require("./config/connection");
 // Comment out this code once you have built out queries and mutations in the client folder
 const routes = require("./routes");
 
+
 const PORT = process.env.PORT || 3001;
 const app = express();
 // Uncomment the following code once you have built the queries and mutations in the client folder
@@ -21,6 +22,7 @@ const server = new ApolloServer({
   resolvers,
   context: authMiddleware,
 });
+
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -32,7 +34,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Comment out this code once you have built out queries and mutations in the client folder
-app.use(routes);
+// app.use(routes);
 
 app.get("/", (req, res) => {
   res.send("Hello to Fitness Tracker API");
@@ -65,3 +67,4 @@ app.use("/user-routes", usersRouter);
 
 // Uncomment the following code once you have built the queries and mutations in the client folder
 startApolloServer();
+
