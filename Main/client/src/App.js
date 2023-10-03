@@ -6,6 +6,7 @@ import Login from "./pages/LoginSignup/login"
 import MainPage from "./pages/mainPage";
 import SearchPage from './pages/searchPage'
 import NavBar from "./component/navBar/navBar";
+import Footer from "./component/Footer/footer";
 
 function App(){
 // Construct our main GraphQL API endpoint
@@ -47,6 +48,7 @@ const httpLink = createHttpLink({
                     
                     <Route path="/searchPage" element={<SearchPage/>}/>
                 </Routes>
+                <Footer/>
                 </>
             </Router>
         </ApolloProvider>
