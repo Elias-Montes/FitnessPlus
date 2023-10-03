@@ -2,33 +2,37 @@
     {
         "type": "cardio1",
         "name": "Running",
-        "distance": 5.5,
-        "duration": 30,
+        "distance": 2,
+        "duration": 12,
         "date": "2023-10-02T12:00:00Z",
         "userId": "user1"
     },
+
     {
         "type": "cardio2",
-        "name": "Cycling",
-        "distance": 12.2,
-        "duration": 45,
-        "date": "2023-10-03T09:30:00Z",
+        "name": "Running",
+        "distance": 1.5,
+        "duration": 10,
+        "date": "2023-10-02T12:00:00Z",
         "userId": "user2"
     },
+
     {
         "type": "cardio3",
-        "name": "Swimming",
-        "distance": 1.5,
-        "duration": 20,
-        "date": "2023-10-04T18:15:00Z",
+        "name": "Running",
+        "distance": 1,
+        "duration": 7,
+        "date": "2023-10-02T12:00:00Z",
         "userId": "user3"
     },
+
+
     {
         "type": "cardio4",
-        "name": "Jogging",
-        "distance": 3.0,
-        "duration": 25,
-        "date": "2023-10-05T07:45:00Z",
+        "name": "Running",
+        "distance": 4,
+        "duration": 30,
+        "date": "2023-10-02T12:00:00Z",
         "userId": "user4"
     }
 ]
