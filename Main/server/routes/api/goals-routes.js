@@ -4,7 +4,7 @@ const {
   createWeight,
   getWeightById,
   deleteWeight,
-} = require("../../controllers/goals-controller");
+} = require("../../controllers/weight-controller.js");
 
 // import middleware
 const { authMiddleware } = require('../../utils/auth');
