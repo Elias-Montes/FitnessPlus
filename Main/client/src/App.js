@@ -42,18 +42,17 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <>
           <NavBar />
           <Routes>
+            <Route path="/" element={<MainPage />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
-
             <Route path="/searchPage" element={<SearchPage />} />
           </Routes>
-        </>
+        <Footer />
       </Router>
     </ApolloProvider>
   );
-
+  }
 
 export default App;
