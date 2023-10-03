@@ -1,69 +1,71 @@
-import React, { useState } from "react";
-import "./loginSignup.css";
+import React, { useState } from 'react';
+import { useMutation } from '@apollo/client';
+import { Link } from 'react-router-dom';
+import { LOGIN } from '../../utils/mutations';
+import Auth from '../../utils/auth';
 
-import user_icon from "../../component/Assets/person.png";
-import email_icon from "../../component/Assets/email.png";
-import password_icon from "../../component/Assets/password.png";
+function Login(props) {
+  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [login, { error }] = useMutation(LOGIN);
 
-const LoginSignup = () => {
-  const [action, setAction] = useState("Sign Up");
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const mutationResponse = await login({
+        variables: { email: formState.email, password: formState.password },
+      });
+      const token = mutationResponse.data.login.token;
+      Auth.login(token);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
 
   return (
-    <div className="pageColor">
-    <div>
-      <div className="container">
-        <div className="header">
-          <div className="text">{action}</div>
-          <div className="underline"></div>
+    <div className="container my-1">
+      <Link to="/signup">← Go to Signup</Link>
+
+      <h2>Login</h2>
+      <form onSubmit={handleFormSubmit}>
+        <div className="flex-row space-between my-2">
+          <label htmlFor="email">Email address:</label>
+          <input
+            placeholder="youremail@test.com"
+            name="email"
+            type="email"
+            id="email"
+            onChange={handleChange}
+          />
         </div>
-        <div className="inputs">
-          {action === "Login" ? (
-            <div></div>
-          ) : (
-            <div className="input">
-              <img src={user_icon} alt="" />
-              <input type="text" placeholder="Name" />
-            </div>
-          )}
-          <div className="input">
-            <img src={email_icon} alt="" />
-            <input type="email" placeholder="Email ID" />
-          </div>
-          <div className="input">
-            <img src={password_icon} alt="" />
-            <input type="password" placeholder="Password" />
-          </div>
-          {action === "Sign Up" ? (
-            <div></div>
-          ) : (
-            <div className="forgot-password">
-              Forgot Password? <span>Click Here</span>
-            </div>
-          )}
+        <div className="flex-row space-between my-2">
+          <label htmlFor="pwd">Password:</label>
+          <input
+            placeholder="******"
+            name="password"
+            type="password"
+            id="pwd"
+            onChange={handleChange}
+          />
         </div>
-        <div className="submit-container">
-          <div
-            className={action === "Login" ? "submit gray" : "submit"}
-            onClick={() => {
-              setAction("Sign Up");
-            }}
-          >
-            Sign UP
+        {error ? (
+          <div>
+            <p className="error-text">The provided credentials are incorrect</p>
           </div>
-          <div
-            className={action === "Sign Up" ? "submit gray" : "submit"}
-            onClick={() => {
-              setAction("Login");
-            }}
-          >
-            {" "}
-            Login
-          </div>
+        ) : null}
+        <div className="flex-row flex-end">
+          <button type="submit">Submit</button>
         </div>
-      </div>
-    </div>
+      </form>
     </div>
   );
-};
+}
 
-export default LoginSignup;
+export default Login;
