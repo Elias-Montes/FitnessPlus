@@ -23,6 +23,8 @@
   "homepage": "https://github.com/Elias-Montes/FitnessPlus#readme",
   "devDependencies": {
     "concurrently": "^7.6.0"
+  },
+  "dependencies": {
+    "mongodb": "^6.1.0"
   }
-
 }
