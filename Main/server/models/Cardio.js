@@ -21,8 +21,9 @@ const CardioSchema = new Schema(
       required: true,
     },
     date: {
-      type: Date,
+      type: Date, 
       required: true,
+      default: Date.now,
     },
     userId: {
       type: Schema.Types.ObjectId,

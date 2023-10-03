@@ -3,9 +3,9 @@ import React from "react";
 export default function NavBar () {
     return (
         <div>
-             <nav class="navbar background">
-                <ul class="nav-list">
-                    <div class="logo">
+             <nav className="navbar background">
+                <ul className="nav-list">
+                    <div className="logo">
                         <img alt='LOGO' src='./Fitness-Gym-Barbell-Dumbbell-logo-design-EDITED.jpg'></img>
                     </div>
                     <h1>Fitness+</h1>
@@ -16,9 +16,9 @@ export default function NavBar () {
                     <li><a href="#Weight">Weight</a></li>
                     <li><a href='#PR'>Personal Records</a></li>
                 </ul>
-                <div class="rightNav">
+                <div className="rightNav">
                     <input placeholder='Search for your food' type="text" name="search" id="search" />
-                    <button class="btn btn-sm">Search</button>
+                    <button className="btn btn-sm">Search</button>
                 </div>
             </nav>
         </div>
