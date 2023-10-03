@@ -4,6 +4,10 @@
             "username": "user1",
             "password": "password1",
             "email": "user1@example.com",
+            "sleep": [{
+                "sleep": 8,       
+                "date": "2023-10-02T12:00:00Z"
+            }],
             "cardio": [{
                 "type": "cardio1",
                 "name": "Running",
@@ -28,21 +32,56 @@
                  "sets": [3 , 4],
                  "reps": [ 5, 8, 10],
                  "date": "2023-10-02T14:00:00Z"
-                }
-            ]
+                }],
+                "weight": [
+                    {
+                        "weight": 140,
+                        "weightType": "pound",
+                        "date": "2023-10-02T12:00:00Z"
+                    }],
+                "goal": [{
+                    "goal": {
+                        "weight": 125,
+                        "sleep": 8,
+                        "resistance": {
+                            "name": [
+                                "Bench Press",
+                                "Squat",
+                                "Deadlift",
+                                "Dumbell Curl"
+                             ],
+                             "weight": [
+                                140,
+                                200,
+                                180,
+                                35
+                             ]
+                        },
+                        "cardio": {
+                            "name": "Running",
+                            "distance": 2,
+                            "duration": 10
+                        }
+                    },
+                    "date": "2023-10-02T12:00:00Z"
+                }]
                 
         },
         {
             "username": "user2",
             "password": "password2",
             "email": "user2@example.com",
+            "sleep": [{
+                "sleep": 6,
+                "date": "2023-10-02T15:30:00Z"
+                }],
             "cardio": [{
                 "type": "cardio2",
                 "name": "Running",
                 "distance": 1.5,
                 "duration": 10,
-                "date": "2023-10-02T12:00:00Z"
-            }],
+                "date": "2023-10-02T15:30:00Z"
+                }],
             "resistance": [{
                 "type": "strength2",
             "name": [
@@ -66,6 +105,10 @@
             "username": "user3",
             "password": "password3",
             "email": "user3@example.com",
+            "sleep": [{
+                "sleep": 10,
+                "date": "2023-10-03T12:15:00Z"
+                }],
             "cardio": [{
                 "type": "cardio3",
                 "name": "Running",
@@ -74,18 +117,72 @@
                 "date": "2023-10-02T12:00:00Z"
             }],
             "resistance": [{
-
+                "type": "strength3",
+                "name": [
+                "Bench Press",
+                "Squat",
+                "Deadlift",
+                "Dumbell Curl"
+             ],
+             "weight": [
+                110,
+                180,
+                150,
+                20
+             ],
+             "sets": [3 , 4],
+             "reps": [ 5, 8, 10],
+             "date": "2023-10-03T12:15:00Z"
             }]
-        },
+            },
+            {
+                "weight": [{
+                    "weight": 170,
+                    "weightType": "pound",
+                    "date": "2023-10-02T12:00:00Z"
+                }]
+            },
+            {
+                "goal": [{
+                    "goal": {
+                        "weight": 180,
+                        "sleep": 8,
+                        "resistance": {
+                            "name": [
+                                "Bench Press",
+                                "Squat",
+                                "Deadlift",
+                                "Dumbell Curl"
+                             ],
+                             "weight": [
+                                160,
+                                270,
+                                210,
+                                45
+                             ]
+                        },
+                        "cardio": {
+                            "name": "Running",
+                            "distance": 1.5,
+                            "duration": 8
+                        }
+                    },
+                    "date": "2023-10-02T12:00:00Z"
+                }]
+            },
         {
-            "username": "user4",
-            "password": "password4",
-            "email": "user4@example.com",
+            "username": "user3",
+            "password": "password3",
+            "email": "user3@example.com",
+            "sleep": [{
+                "sleep": 7,
+        "date": "2023-10-03T17:45:00Z"
+                }],
             "cardio": [{
-                "type": "cardio4",
+                "type": "cardio3",
                 "name": "Running",
-                "distance": 4,
-                "duration": 30,
+                "distance": 1,
+                "duration": 7,
                 "date": "2023-10-02T12:00:00Z"
             }],
             "resistance": [{
@@ -105,13 +202,55 @@
              "sets": [3 , 4],
              "reps": [ 5, 8, 10],
              "date": "2023-10-03T12:15:00Z"
-            }]
+             },
+             {
+                "weight": [{
+                    "weight": 120,
+                     "weightType": "pound",
+                    "date": "2023-10-02T12:00:00Z"
+                }]
+            },
+            {
+                "goal": [{
+                    "goal": {
+                        "weight": 130,
+                        "sleep": 8,
+                        "resistance": {
+                            "name": [
+                                "Bench Press",
+                                "Squat",
+                                "Deadlift",
+                                "Dumbell Curl"
+                             ],
+                             "weight": [
+                                140,
+                                200,
+                                180,
+                                35
+                             ]
+                        },
+                        "cardio": {
+                            "name": "Running",
+                            "distance": 1,
+                            "duration": 5
+                        }
+                    },
+                    "date": "2023-10-02T12:00:00Z"
+                }]
+             }]
+           
         },
         {
-            "username": "user5",
-            "password": "password5",
-            "email": "user5@example.com",
-            "cardio": [],
+            "username": "user4",
+            "password": "password4",
+            "email": "user4@example.com",
+            "cardio": [{
+                "type": "cardio4",
+                "name": "Running",
+                "distance": 0.5,
+                "duration": 5,
+                "date": "2023-10-02T12:00:00Z"
+            }],
             "resistance": [{
                 "type": "strength4",
             "name": [
@@ -129,9 +268,47 @@
              "sets": [3 , 4],
              "reps": [ 5, 8, 10],
              "date": "2023-10-03T17:45:00Z"
+        
             }]
-        }
-    ]
+            }
+            ,{
+                "weight": [{
+                    "weight": 200,
+                     "weightType": "pound",
+                     "date": "2023-10-02T12:00:00Z"
+                }]
+            },
+            {
+                "goal": [{
+                    "goal": {
+                        "weight": 170,
+                        "sleep": 8,
+                        "resistance": {
+                            "name": [
+                                "Bench Press",
+                                "Squat",
+                                "Deadlift",
+                                "Dumbell Curl"
+                             ],
+                             "weight": [
+                                140,
+                                200,
+                                180,
+                                35
+                             ]
+                        },
+                        "cardio": {
+                            "name": "Running",
+                            "distance": 0.5,
+                            "duration": 3
+                        }
+                    },
+                    "date": "2023-10-02T12:00:00Z"
+                }]
+            
+            }  
+                
+        ]
 }
 
 

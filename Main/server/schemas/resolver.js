@@ -1,4 +1,4 @@
-const { Cardio, Resistance, User } = require('../models');
+const { Cardio, Resistance, User, Sleep, Goals, Weight } = require('../models');
 
 const resolvers = {
     Query: {

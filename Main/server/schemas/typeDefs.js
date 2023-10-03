@@ -31,10 +31,32 @@ type User {
     resistance:[Resistance]
 }
 
+type Goal {
+  goal: String
+  date: Int
+  userId: [User]
+}
+
+type Sleep {
+  sleep: Int
+  date: Int
+  userId: [User]
+}
+
+type Weight {
+  weight: Int
+  weightType: String
+  date: Int
+  userId: [User]
+}
+
 type Query {
   cardio: [Cardio]
   resistance: [Resistance]
   user:[User]
+  goal: [Goal]
+  sleep: [Sleep]
+  weight: [Weight]
 }
 `;
 
