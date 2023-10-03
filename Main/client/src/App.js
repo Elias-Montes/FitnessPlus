@@ -12,6 +12,7 @@ import Signup from "./pages/LoginSignup/Signup";
 import MainPage from "./pages/mainPage";
 import SearchPage from "./pages/searchPage";
 import NavBar from "./component/navBar/navBar";
+import Footer from "./component/Footer/footer";
 
 function App() {
   // Construct our main GraphQL API endpoint
@@ -37,6 +38,7 @@ function App() {
     link: authLink.concat(httpLink),
     cache: new InMemoryCache(),
   });
+
   return (
     <ApolloProvider client={client}>
       <Router>
@@ -52,6 +54,6 @@ function App() {
       </Router>
     </ApolloProvider>
   );
-}
+
 
 export default App;

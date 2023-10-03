@@ -1,133 +1,143 @@
 import React, { useState } from 'react';
 import NumberInputBasic from '../component/customnumberinput/customNumberInput';
-
+import Box from '@mui/material/Box';
+import "./mainPage.css"
+import Stack from '@mui/system/Stack';
 
 function MainPage() {
     const [bench, setBench] = useState(0);
     const [squat, setSquat] = useState(0);
     const [deadlift, setDeadlift] = useState(0);
     const [mile, setMile] = useState(0);
+    const [calories, setCalories] = useState(0);
+    const [sleep, setSleep] = useState(0);
+    const [weight, setWeight] = useState(0);
+
+const style =                     {
+    display: 'flex',
+    justifyContent: "space-evenly",
+    mx: 30,
+    my: 1,
+    p: 1,
+    color: (theme) =>
+        theme.palette.mode === 'dark' ? 'black' : 'black',
+    border: '1px solid',
+    borderRadius: 2,
+    fontSize: '30px',
+    fontWeight: '500',
+}
+
+const prStyle2 = {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around'
+}
+
+const prStyle = {
+    width: '34%',
+}
+
+const inputStyle = {
+    display: 'flex',
+    justifyContent: 'center'
+}
 
     return (
-        <div>
-            {/* <nav class="navbar background">
-                <ul class="nav-list">
-                    <div class="logo">
-                        <img alt='LOGO' src='./Fitness-Gym-Barbell-Dumbbell-logo-design-EDITED.jpg'></img>
-                    </div>
-                    <h1>Fitness+</h1>
-                    <li><a href="#Goals">Goals</a></li>
-                    <li><a href="#Sleep">Sleep</a></li>
-                    <li><a href="#Weight">Weight</a></li>
-                    <li><a href='#Calories'>Calories</a></li>
-                    <li><a href='#PR'>Personal Records</a></li>
-                    <li><a href='#Calendar'>Weekly Calendar</a></li>
-                </ul>
-                <div class="rightNav">
-                    <input placeholder='Search for your food' type="text" name="search" id="search" />
-                    <button class="btn btn-sm">Search</button>
-                </div>
-            </nav> */}
-            <section class="section" id='Calendar'>
-                <div class="box-main">
-                    <div class="userInput">
-                        <h1 class="text-big">
-                            Weekly Calendar
-                        </h1>
-                        <div><input class="calInput"></input><input class="calInput"></input></div>
-                        <div class="calendar">
-                            <div class="outer">
-                            <table>
-                            <thead>
-                                <tr>
-                                <th>Mon</th>
-                                <th>Tue</th>
-                                <th>Wed</th>
-                                <th>Thu</th>
-                                <th>Fri</th>
-                                <th>Sat</th>
-                                <th>Sun</th>
-                                </tr>
-                            </thead>
-                            </table>
-                            <div class="wrap"> 
-                            <table>
-                                <tbody>
-                                <tr>
-                                <td><div class="event double"><input type="checkbox" class="checkbox" />8:30–9:30 Yoga</div></td>
-                                <td><div class="event double"><input type="checkbox" class="checkbox" /></div></td>
-                                <td><div class="event double"><input type="checkbox" class="checkbox"></input></div></td>
+        <div className="body">
+            <Box className="" sx={style}>
+                {"Weekly Calendar"}
+            </Box>
+            {/* <div><input className="calInput"></input><input className="calInput"></input></div> */}
+
+            <Box className="calendar outer">
+                <table className="dayTable">
+                    <thead>
+                        <tr>
+                            <th>Mon</th>
+                            <th>Tue</th>
+                            <th>Wed</th>
+                            <th>Thu</th>
+                            <th>Fri</th>
+                            <th>Sat</th>
+                            <th>Sun</th>
+                        </tr>
+                    </thead>
+                </table>
+                <div className="wrap">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><div className="event double"><input type="checkbox" class="checkbox" /><input></input>8:30–9:30 Yoga</div></td>
+                                <td><div className="event double"><input type="checkbox" class="checkbox" /></div></td>
+                                <td><div className="event double"><input type="checkbox" class="checkbox" /></div></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                </tr>
-                            </tbody>
-                            </table>
-                            </div>
-                            </div>
-                            </div>
-                        </div>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-            </section>
+            </Box>
 
-            <section class="section" id='Goals'>
-                <div class="box-main">
-                    <div class="userInput">
-                        <h1 class="text-big">
-                            Your Goals
-                        </h1>
-                    </div>
-                </div>
-            </section>
+                    <Box className="" id='Goals' sx={style}>
+                        {"Goals"}
+                    </Box>
+                    <Stack sx={{
+                        display: 'flex',
+                        flexWrap: 'wrap',
+                        width: '80%',
+                        justifyContent: 'space-center',
+                        mx: '12%',
+                        }} direction='row' useFlexGap flexWrap="wrap">
+                        <Box sx={{p: '10px'}}>
+                            <input type='checkbox'></input><input></input><label> Goal Weight</label>
+                        </Box>
+                        <Box sx={{p: '10px'}}>
+                            <input type='checkbox'></input><input></input><label> Daily Calories</label>
+                        </Box>
+                        <Box sx={{p: '10px'}}>
+                            <input type='checkbox'></input><input></input><label> Weekly Sleep</label>
+                        </Box>
+                        <Box sx={{p: '10px'}}>
+                            <input type='checkbox'></input><input></input><label> Bench Max</label>
+                        </Box>
+                        <Box sx={{p: '10px'}}>
+                            <input type='checkbox'></input><input></input><label> Squat Max</label>
+                        </Box>
+                        <Box sx={{p:'10px'}}>
+                            <input type='checkbox'></input><input></input><label> Deadlift Max</label>
+                        </Box>
+                        <Box sx={{p: '10px'}}>
+                            <input type='checkbox'></input><input></input><label> Goal Mile Time</label>
+                        </Box>
+                    </Stack>
+                    
+                    <Box className="" id='Calories' sx={style}>
+                        {"Calories"}
+                    </Box>
+                        <Box sx={inputStyle}><NumberInputBasic updateValue={setCalories} value={calories} /></Box>
+                    
+                    <Box className="" id='Sleep' sx={style}>
+                        {"Sleep"}
+                    </Box>
+                    <Box sx={inputStyle}><NumberInputBasic updateValue={setSleep} value={sleep} /></Box>
 
-            <section class="section" id='Calories'>
-                <div class="box-main">
-                    <div class="userInput">
-                        <h1 class="text-big">
-                            Todays Calories
-                        </h1>
-                    </div>
-                </div>
-            </section>            
-            
-            <section class="section" id='Sleep'>
-                <div class="box-main">
-                    <div class="userInput">
-                        <h1 class="text-big">
-                            Sleep
-                        </h1>
-                    </div>
-                </div>
-            </section>
+                    <Box className="" id='Weight' sx={style}>
+                        {"Current Weight"}
+                    </Box>
+                    <Box sx={inputStyle}><NumberInputBasic updateValue={setWeight} value={weight} /></Box>
 
-            <section class="section" id='Weight'>
-                <div class="box-main">
-                    <div class="userInput">
-                        <h1 class="text-big">
-                            Current Weight
-                        </h1>
-                    </div>
+                        <Box className="" id='PR' sx={style}>
+                            {"Personal Records"}
+                        </Box>
+                        <Box sx={prStyle2}>
+                            <Box sx={prStyle}><label>Bench</label><NumberInputBasic updateValue={setBench} value={bench} /></Box>
+                            <Box sx={prStyle}><label>Squat</label><NumberInputBasic updateValue={setSquat} value={squat} /></Box>
+                            <Box sx={prStyle}><label>Deadlift</label><NumberInputBasic updateValue={setDeadlift} value={deadlift} /></Box>
+                            <Box sx={prStyle}><label>Quickest Mile</label><NumberInputBasic updateValue={setMile} value={mile} /></Box>
+                        </Box>
                 </div>
-            </section>
-
-            <section class="section" id='PR'>
-                <div class="box-main">
-                    <div class="userInput">
-                        <h1 class="text-big">
-                            Personal Records
-                        </h1>
-                        <ul>
-                            <li>Bench</li><NumberInputBasic updateValue={setBench} value={bench}/>
-                            <li>Squat</li><NumberInputBasic updateValue={setSquat} value={squat}/>
-                            <li>Deadlift</li><NumberInputBasic updateValue={setDeadlift} value={deadlift}/>
-                            <li>Quickest Mile</li><NumberInputBasic updateValue={setMile} value={mile}/>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-        </div>
     )
 }
 
