@@ -4,8 +4,8 @@ export default function Footer () {
     return (
         <div>
             <footer>
-                <nav class="navbar background footer">
-                    <div class="logo">
+                <nav className="navbar background footer">
+                    <div className="logo">
                         <img alt='LOGO' src='./Fitness-Gym-Barbell-Dumbbell-logo-design-EDITED.jpg'></img>
                     </div>
                     <div>Thank you for using Fitness+</div>

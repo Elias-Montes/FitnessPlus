@@ -67,9 +67,9 @@ const inputStyle = {
                     <table>
                         <tbody>
                             <tr>
-                                <td><div className="event double"><input type="checkbox" class="checkbox" /><input></input>8:30–9:30 Yoga</div></td>
-                                <td><div className="event double"><input type="checkbox" class="checkbox" /></div></td>
-                                <td><div className="event double"><input type="checkbox" class="checkbox" /></div></td>
+                                <td><div className="event double"><input type="checkbox" className="checkbox" /><input></input>8:30–9:30 Yoga</div></td>
+                                <td><div className="event double"><input type="checkbox" className="checkbox" /></div></td>
+                                <td><div className="event double"><input type="checkbox" className="checkbox" /></div></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
