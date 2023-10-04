@@ -42,7 +42,7 @@ After installing npm packages, the application will be invoked by using the foll
 npm run develop
 ```
 
-[Click me to see the app!](https://<fitnessplus>.com)
+[Click me to see the app!](https://fitness-plus-01-f2b055c108e6.herokuapp.com)
 
 ## License
 
