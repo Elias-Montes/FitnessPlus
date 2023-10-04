@@ -1,3 +1,4 @@
+const { signToken } = require('../utils/auth');
 
 const { Cardio, Resistance, User, Sleep, Goals, Weight } = require('../models');
 
@@ -18,6 +19,13 @@ const resolvers = {
   },
 
   Mutation: {
+    addUser: async (parent, args) => {
+      const user = await User.create(args);
+      const token = signToken(user);
+
+      return { token, user };
+    },
+
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
