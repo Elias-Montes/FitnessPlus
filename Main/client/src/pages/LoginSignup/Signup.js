@@ -3,23 +3,58 @@ import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import Auth from "../../utils/auth";
 import { ADD_USER } from "../../utils/mutations";
+import "./loginSignup.css";
+
 
 function Signup(props) {
-  const [formState, setFormState] = useState({ email: "", password: "" });
+  const [formState, setFormState] = useState({
+    email: "",
+    password: "",
+    firstName: "",
+    lastName: "",
+  });
   const [addUser] = useMutation(ADD_USER);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    const mutationResponse = await addUser({
-      variables: {
-        email: formState.email,
-        password: formState.password,
-        firstName: formState.firstName,
-        lastName: formState.lastName,
-      },
-    });
-    const token = mutationResponse.data.addUser.token;
-    Auth.login(token);
+
+    // Validate the user input
+    if (!formState.email) {
+      return alert("Please enter your email address.");
+    }
+
+    if (!formState.password) {
+      return alert("Please enter your password.");
+    }
+
+    if (!formState.firstName) {
+      return alert("Please enter your first name.");
+    }
+
+    if (!formState.lastName) {
+      return alert("Please enter your last name.");
+    }
+
+    // Disable the submit button while the request is being processed
+    event.target.disabled = true;
+
+    try {
+      const mutationResponse = await addUser({
+        variables: {
+          email: formState.email,
+          password: formState.password,
+          firstName: formState.firstName,
+          lastName: formState.lastName,
+        },
+      });
+      const token = mutationResponse.data.addUser.token;
+      Auth.login(token);
+    } catch (e) {
+      console.log(e);
+    } finally {
+      // Enable the submit button after the request has finished processing
+      event.target.disabled = false;
+    }
   };
 
   const handleChange = (event) => {
@@ -77,7 +112,9 @@ function Signup(props) {
           />
         </div>
         <div className="flex-row flex-end">
-          <button type="submit">Submit</button>
+          <button type="submit" disabled={false}>
+            Submit
+          </button>
         </div>
       </form>
     </div>
